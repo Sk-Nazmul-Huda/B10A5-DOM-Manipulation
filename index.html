@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme = "light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,78 @@
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-  <h1>Hello Bangladesh</h1>
+  <header class="sticky top-0 z-50">
+  <!-- Navbar start here -->
+  <nav class="bg-[#F9F7F3]">
+    <div class="navbar container mx-auto">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
+          </div>
+          <ul
+            tabindex="0"
+            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+            <li><a>Donate</a></li>
+            <li><a>History</a></li>
+           
+          </ul>
+        </div>
+        <a class="btn btn-ghost btn-sm text-xl bg-[#B4F461]">Blog</a>
+      </div>
+      <div class="navbar-center hidden lg:flex">
+        <div>
+          <img src="./assets/logo.png" alt="">
+        </div>
+        <div>
+          <p class="font-bold text-xl ml-4">Donate Bangladesh</p>
+        </div>
+      </div>
+      <div class="navbar-end space-x-2">
+        <span><img src="./assets/coin.png" alt=""></span>
+        <span>5200</span>
+        <span>BDT</span>
+      </div>
+    </div>
+  </nav>
+<!-- Navbar end here -->
+ <!-- Two buttons -->
+  <div class="flex justify-center pt-8 pb-4 space-x-5 bg-gray-100 drop-shadow-md">
+    <button class="btn btn-sm">Donation</button>
+    <button class="btn btn-sm">History</button>
+  </div>
+</header>
+
+  <main>
+    <section>
+      <div class="hero bg-base-200 min-h-screen">
+        <div class="hero-content flex-col lg:flex-row">
+          <img
+            src="./assets/noakhali.png"
+            class="max-w-sm rounded-lg shadow-2xl" />
+          <div>
+            <h1 class="text-5xl font-bold">Box Office News!</h1>
+            <p class="py-6">
+              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
+              quasi. In deleniti eaque aut repudiandae et a id nisi.
+            </p>
+            <button class="btn btn-primary">Get Started</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
 
 
