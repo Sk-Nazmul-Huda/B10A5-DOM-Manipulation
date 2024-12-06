@@ -48,7 +48,7 @@
       </div>
       <div class="navbar-end space-x-2">
         <span><img src="./assets/coin.png" alt=""></span>
-        <span>15000</span>
+        <span id="donate-balance">15000</span>
         <span>BDT</span>
       </div>
     </div>
@@ -73,15 +73,31 @@
             <div class="space-y-4">
               <button class="btn btn-sm">
                 <span><img src="./assets/coin.png" alt=""></span>
-                <span>1500</span>
+                <span id="noakhali-donate-amount">1500</span>
                 <span>BDT</span>
               </button>
               <h1 class="text-xl font-bold">Donate for Flood at Noakhali, Bangladesh</h1>
               <p class="text-gray-500">
                 The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
               </p>
-              <input type="text" class="w-full h-7 ps-3 py-4 rounded-md" placeholder="Write Donate Amount">
-              <button class="btn btn-sm w-full bg-[#B4F461] text-gray-700 font-bold">Donate Now</button>
+              <input type="text" id="noakhali-input-box" class="w-full h-7 ps-3 py-4 rounded-md" placeholder="Write Donate Amount" required autocomplete="off">
+              <button id="noakhali-donate-button" class="btn btn-sm w-full bg-[#B4F461] text-gray-700 font-bold">Donate Now</button>
+
+              <!-- Modal Body start -->
+              <dialog id="my-modal" class="modal modal-bottom sm:modal-middle">
+                <div class="modal-box text-center">
+                  <h3 class="text-5xl font-bold">Congrats!</h3>
+                  <span class="flex justify-center pt-8"><img src="./assets/coin.png" alt=""></span>
+                  <p class="py-4">You Have Donated for Humankind</p>
+                  <p class="py-4 text-2xl font-semibold">Successfully</p>
+                  <div class="modal-action">
+                    <form method="dialog">                     
+                      <button class="btn btn-md">Close Confirmation</button>
+                    </form>
+                  </div>
+                </div>
+              </dialog>
+              <!-- Modal Body end -->
             </div>
           </div>
         </div>
@@ -105,7 +121,7 @@
               <p class="text-gray-500">
                 The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.
               </p>
-              <input type="text" class="w-full h-7 ps-3 py-4 rounded-md" placeholder="Write Donate Amount">
+              <input type="text" class="w-full h-7 ps-3 py-4 rounded-md" placeholder="Write Donate Amount" required autocomplete="off">
               <button class="btn btn-sm w-full bg-[#B4F461] text-gray-700 font-bold">Donate Now</button>
             </div>
           </div>
@@ -130,7 +146,7 @@
               <p class="text-gray-500">
                 The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.
               </p>
-              <input type="text" class="w-full h-7 ps-3 py-4 rounded-md" placeholder="Write Donate Amount">
+              <input type="text" class="w-full h-7 ps-3 py-4 rounded-md" placeholder="Write Donate Amount" required autocomplete="off">
               <button class="btn btn-sm w-full bg-[#B4F461] text-gray-700 font-bold">Donate Now</button>
             </div>
           </div>
@@ -140,12 +156,9 @@
     </div>
 
     <!-- History Section Start -->
-    <div id="history-section" class="container mx-auto hidden">
+    <div id="history-section" class="container mx-auto">
       <h2 class="text-center text-2xl font-bold my-5">----> Donation History <----</h2>
-        <div class="bg-white border border-gray-900 p-5 m-1 rounded-md">
-          <h2>8500 Taka is Donated for Flood at Noakhali, Bangladesh</h2>
-          <p>Date: Friday Dec 6 5:0:0 GMT</p>
-        </div>
+       <!-- Dynamic data come here from javaScript -->
     </div>
     <!-- History Section End -->
   </main>
