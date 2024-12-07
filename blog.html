@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <header class="sticky top-0 z-50">
+    <!-- Navbar start here -->
+    <nav class="bg-[#F9F7F3]">
+      <div class="navbar container mx-auto">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16" />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+              <li><a>Donate</a></li>
+              <li><a>History</a></li>
+             
+            </ul>
+          </div>
+          <a id="go-to-home-page" class="btn btn-ghost btn-sm text-xl bg-[#B4F461]">Home</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <div>
+            <img src="./assets/logo.png" alt="">
+          </div>
+          <div>
+            <p class="font-bold text-xl ml-4">Donate Bangladesh</p>
+          </div>
+        </div>
+        <div class="navbar-end space-x-2">
+          <span><img src="./assets/coin.png" alt=""></span>
+          <span id="donate-balance">15000</span>
+          <span>BDT</span>
+        </div>
+      </div>
+    </nav>
+  <!-- Navbar end here -->
+   <!-- Two buttons -->
+    <div class="flex justify-center pt-8 pb-4 space-x-5 bg-gray-100 drop-shadow-md">
+      <button id="donation-btn" class="btn btn-sm bg-[#B4F461]">Donation</button>
+      <button id="history-btn" class="btn btn-sm">History</button>
+    </div>
+  </header>
+
+  <main class="container mx-auto space-y-6">
+
+    <h1 class="text-4xl font-bold pt-6">Important FAQ</h1>
+    <!-- accordion start -->
+
+    <div class="collapse collapse-plus bg-base-200">
+      <input type="radio" name="my-accordion-3" checked="checked" />
+      <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM) ?</div>
+      <div class="collapse-content">
+        <p>The DOM (Document Object Model) is a programming interface for web documents. It represents the structure of an HTML or XML document as a tree of objects, where each object corresponds to a part of the page (like elements, attributes, and text). The DOM allows programming languages (typically JavaScript) to interact with and manipulate the content, structure, and style of web pages dynamically.</p>
+      </div>
+    </div>
+    <div class="collapse collapse-plus bg-base-200">
+      <input type="radio" name="my-accordion-3" />
+      <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+      <div class="collapse-content">
+        <p>To select an element from the DOM, you can use methods like 
+         <br> 1. getElementById()
+         <br> 2. getElementsByClassName()
+         <br> 3. querySelector()
+         <br> 4. querySelectorAll() in JavaScript.</p>
+      </div>
+    </div>
+    <div class="collapse collapse-plus bg-base-200">
+      <input type="radio" name="my-accordion-3" />
+      <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
+      <div class="collapse-content">
+        <p>Event delegation is a technique in JavaScript where a single event listener is added to a parent element to handle events for its child elements. Instead of attaching individual event listeners to each child, the parent listens for events that bubble up from the children.
+          <br><br>
+
+          This is useful because it improves performance, especially when dealing with dynamically added elements, and reduces memory usage by minimizing the number of event listeners needed.</p>
+      </div>
+    </div>
+    <div class="collapse collapse-plus bg-base-200">
+      <input type="radio" name="my-accordion-3" />
+      <div class="collapse-title text-xl font-medium">How do you manipulate an element's attribute and styles using the DOM?</div>
+      <div class="collapse-content">
+        <p>To manipulate an element's attributes and styles using the DOM:
+          <br>
+
+          Attributes: Use setAttribute() to change an attribute, and getAttribute() to read it.
+          <br><br>
+          
+          Code here: <br>
+          element.setAttribute('src', 'image.jpg'); // Change attribute <br>
+          let src = element.getAttribute('src'); // Get attribute <br>
+          Styles: Use the style property to modify inline CSS styles.
+          <br><br>
+          Code here: <br>
+          element.style.color = 'red'; // Change color <br>
+          element.style.fontSize = '16px'; // Change font size <br>
+          These methods allow you to dynamically change the content and appearance of elements on the page.
+          
+          
+          
+          </p>
+      </div>
+    </div>
+    <div class="collapse collapse-plus bg-base-200">
+      <input type="radio" name="my-accordion-3" />
+      <div class="collapse-title text-xl font-medium">What is event bubbling in DOM? </div>
+      <div class="collapse-content">
+        <p>Event bubbling is a concept in the DOM where an event, such as a click or key press, starts from the target element and then "bubbles" up to its parent elements, triggering any relevant event listeners along the way. This allows parent elements to handle events on their child elements without needing individual listeners on each child.
+          <br><br>
+
+          For example, if you click a button inside a div, the click event will first trigger on the button, then bubble up and trigger any click listeners on the parent div, and so on up the DOM tree.</p>
+      </div>
+    </div>
+    <hr class="py-7">
+  </main>
+  
+
+
+  <script src="./js/feature.js"></script>
+</body>
+</html>

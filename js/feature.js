@@ -15,3 +15,5 @@ document.getElementById('history-btn').addEventListener('click', function(){
   donateBtn.classList.remove('bg-[#B4F461]');
   historyBtn.classList.add('bg-[#B4F461]');
 })
+
+// code for blog page
