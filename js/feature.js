@@ -14,6 +14,15 @@ document.getElementById('history-btn').addEventListener('click', function(){
   showSelectById('history-section');
   donateBtn.classList.remove('bg-[#B4F461]');
   historyBtn.classList.add('bg-[#B4F461]');
-})
+});
 
-// code for blog page
+// code for go to blog page
+document.getElementById('go-to-blog-page').addEventListener('click', function(){
+  window.location.href = "./blog.html";
+});
+
+// code for go to home page
+document.getElementById('go-to-home-page').addEventListener('click', function(){
+  window.history.back();
+  
+});
